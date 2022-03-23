@@ -1,3 +1,3 @@
 # Documentacion
 
-Aprendo los comandos de Git, entre otras cosas.
+Aprendo los comandos de Git, manejando bash.
