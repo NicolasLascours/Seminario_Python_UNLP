@@ -2,6 +2,7 @@ archivo1 = open('eval1.txt', 'r', encoding="utf8")
 archivo2 = open('eval2.txt','r', encoding="utf8")
 archivo_nombres = open ('nombres_1.txt', 'r', encoding="utf8")
 
+
 def limpiar_archivos_de_notas(notas, lista_de_notas):
     for elem in notas.readlines():
         lista_de_notas.append(float(elem.replace(",", "").replace("\n", "").strip()))
@@ -32,6 +33,10 @@ print(promedio)
 dicc_de_lista = dict(zip(lista_nueva_de_nombres, suma_notas))
 print(dicc_de_lista) 
 
+archivo1.close()
+archivo2.close()
+archivo_nombres.close()
+
 def alumnos_debajo_del_promedio(dicc):
     print ("los alumnos que están por debajo de la nota promedio son: ")
     for key, value in dicc.items():
@@ -40,3 +45,4 @@ def alumnos_debajo_del_promedio(dicc):
     
 
 alumnos_debajo_del_promedio(dicc_de_lista)
+
